@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright (C) 2014 Akretion (http://www.akretion.com/)
+    @author Alexis de Lattre <alexis.delattre@akretion.com>
+    The licence is in the file __openerp__.py
+-->
+
+<openerp>
+<data>
+
+<record id="dilicom_csv_purchase_order" model="ir.actions.report.xml">
+    <field name="name">Dilicom Commande CSV</field>
+    <field name="model">purchase.order</field>
+    <field name="report_name">dilicom.csv.purchase.order</field>
+    <field name="report_type">aeroo</field>
+    <field name="in_format">genshi-raw</field>
+    <field name="report_rml">purchase_dilicom_csv/report/dilicom_purchase_order_csv.txt</field>
+    <field name="parser_state">default</field>
+    <field name="tml_source">file</field>
+    <field name="multi" eval="0"/>
+    <field name="out_format" ref="report_aeroo.report_mimetypes_raw"/>
+    <field name="content_fname">txt</field>
+    <field name="fallback_false" eval="0"/>
+    <field name="attachment_use" eval="0"/>
+    <field name="styles_mode">default</field>
+</record>
+
+<record id="button_dilicom_csv_purchase_order" model="ir.values"> <!-- Add print button -->
+    <field name="key2">client_print_multi</field>
+    <field name="model">purchase.order</field>
+    <field name="name">Dilicom Commande CSV</field>
+    <field name="value" eval="'ir.actions.report.xml,%d'%dilicom_csv_purchase_order" />
+</record>
+
+</data>
+</openerp>
