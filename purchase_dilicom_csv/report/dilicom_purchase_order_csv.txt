@@ -1,2 +1,0 @@
-{% for l in o.order_line %}${l.product_id.ean13 or 'NO EAN13 ON ' + l.product_id.name};${int(l.product_qty)}
-{% end %}
