@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<report id="dilicom_csv_purchase_order"
+    model="purchase.order"
+    name="purchase_dilicom_csv.report_dilicom_csv"
+    string="Dilicom CSV Order"
+    report_type="qweb-txt"
+    file="purchase_dilicom_csv.report_dilicom_csv"
+    />
+
+</odoo>

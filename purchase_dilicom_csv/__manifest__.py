@@ -9,10 +9,13 @@
     'license': 'AGPL-3',
     'summary': "Generate CSV files to order on the Dilicom website",
     'description': """
+Purchase Dilicom CSV
+====================
+
 Dilicom is a French book distributor (https://dilicom-prod.centprod.com/)
 
-This module adds a *Dilicom CSV report* on the purchase order. It
-generate a CSV file that can be uploaded on the Dilicom website to
+This module adds a report *Dilicom CSV Order* on purchase orders. It
+generates a CSV file that can be uploaded on the Dilicom website to
 generate an order.
 
 This module has been written by Alexis de Lattre from Akretion
@@ -20,11 +23,10 @@ This module has been written by Alexis de Lattre from Akretion
     """,
     'author': 'Akretion',
     'website': 'http://www.akretion.com',
-    'depends': ['purchase'],
+    'depends': ['purchase', 'report_txt'],
     'data': [
-        #'report.xml',
-        'purchase_view.xml',
         'report/dilicom_purchase_order_csv.xml',
+        'report.xml',
         ],
     'installable': True,
 }
