@@ -23,7 +23,7 @@ This module has been written by Alexis de Lattre from Akretion
     """,
     'author': 'Akretion',
     'website': 'http://www.akretion.com',
-    'depends': ['purchase', 'report_txt'],
+    'depends': ['purchase', 'report_qweb_txt'],
     'data': [
         'report/dilicom_purchase_order_csv.xml',
         'report.xml',
