@@ -51,6 +51,31 @@
     <field name="value" eval="'ir.actions.report.xml,%d'%dilicom_csv_purchase_order_multi"/>
 </record>
 
+<!-- Problem with this report:
+when you include the EAN13 field in ODS document, it will be considered as
+an integer and not as a char. So, if the EAN13 starts with 0 (should not be
+the case on books from serious editors that use official EAN13 numbers),
+you won't have the leading 0 in the XLS -->
+<record id="interforum_xls_purchase_order" model="ir.actions.report.xml">
+    <field name="name">Interforum XLS Order</field>
+    <field name="model">purchase.order</field>
+    <field name="report_name">interforum.xls.purchase.order</field>
+    <field name="report_type">aeroo</field>
+    <field name="in_format">oo-ods</field>
+    <field name="report_rml">purchase_dilicom_csv/report/interforum_purchase_order_csv.ods</field>
+    <field name="parser_state">default</field>
+    <field name="tml_source">file</field>
+    <field name="multi" eval="0"/>
+    <field name="out_format" ref="report_aeroo.report_mimetypes_xls_odt"/>
+</record>
+
+<record id="button_interforum_xls_purchase_order" model="ir.values">
+    <field name="key2">client_print_multi</field>
+    <field name="model">purchase.order</field>
+    <field name="name">Interforum XLS Order</field>
+    <field name="value" eval="'ir.actions.report.xml,%d'%interforum_xls_purchase_order"/>
+</record>
+
 
 </data>
 </openerp>

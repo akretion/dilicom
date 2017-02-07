@@ -31,7 +31,7 @@ Dilicom is a French book distributor (https://dilicom-prod.centprod.com/)
 
 This module adds a *Dilicom CSV report* on the purchase order. It
 generate a CSV file that can be uploaded on the Dilicom website to
-generate an order.
+generate an order (it also works on Hachette Diffusion (https://www.hachette-diffusion.fr/). It also adds an XLS order file that can be uploaded on Interforum (https://www.interforum.fr/), which is another book distributor.
 
 This module has been written by Alexis de Lattre from Akretion
 <alexis.delattre@akretion.com>.
