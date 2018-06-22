@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<report
+    id="interforum_xlsx_purchase_order"
+    model="purchase.order"
+    string="Interforum XLSX"
+    report_type="xlsx"
+    name="purchase.order.interforum.xlsx"
+    file="purchase.order.interforum.xlsx"
+/>
+
+</odoo>
