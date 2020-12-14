@@ -2,12 +2,14 @@
 
 <odoo>
 
-<report id="dilicom_csv_purchase_order"
-    model="purchase.order"
-    name="purchase_dilicom_csv.report_dilicom_csv"
-    string="Dilicom CSV Order"
-    report_type="qweb-txt"
-    file="purchase_dilicom_csv.report_dilicom_csv"
-    />
+<record id="dilicom_csv_purchase_order" model="ir.actions.report">
+    <field name="name">Dilicom CSV Order</field>
+    <field name="model">purchase.order</field>
+    <field name="report_type">qweb-text</field>
+    <field name="report_name">purchase_dilicom_csv.report_dilicom_csv</field>
+    <field name="report_file">purchase_dilicom_csv.report_dilicom_csv</field>
+    <field name="print_report_name">'dilicom-%s-%s' % (object.state in ('draft', 'sent', 'to approve') and 'rfq' or 'order', object.name)</field>
+    <field name="binding_model_id" ref="purchase.model_purchase_order" />
+</record>
 
 </odoo>
