@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2021 Akretion France (http://www.akretion.com/)
+  @author: Alexis de Lattre <alexis.delattre@akretion.com>
+-->
+
+<odoo>
+
+<record id="api_chasse_aux_livres_form" model="ir.ui.view">
+    <field name="model">api.chasse.aux.livres</field>
+    <field name="arch" type="xml">
+        <form string="Create a product from chasse-aux-livres.fr">
+                    <div name="help"><p>This wizard will prepare a product pre-filled with the information from <a href="https://www.chasse-aux-livres.fr">chasse-aux-livres.fr</a>.</p></div>
+            <group name="main">
+                <field name="ean"/>
+            </group>
+            <footer>
+                <button name="run" type="object" string="Lancer" class="btn-primary"/>
+                <button special="cancel" string="Cancel" class="btn-default"/>
+            </footer>
+        </form>
+    </field>
+</record>
+
+
+<record id="api_chasse_aux_livres_action" model="ir.actions.act_window">
+    <field name="name">Chasse aux livres</field>
+    <field name="res_model">api.chasse.aux.livres</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+</record>
+
+</odoo>

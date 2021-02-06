@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2021 Akretion France (http://www.akretion.com/)
+  @author: Alexis de Lattre <alexis.delattre@akretion.com>
+-->
+<odoo>
+
+<menuitem id="api_chasse_aux_livres_menu" action="product_chasse_aux_livres.api_chasse_aux_livres_action" parent="purchase.menu_purchase_products" sequence="50"/>
+
+</odoo>
