@@ -2,7 +2,8 @@
 <odoo>
 
 <template id="report_dilicom_csv"><t t-foreach="docs" t-as="o"><t t-foreach="o.order_line" t-as="l" t-if="not l.display_type"><t t-esc="l.product_id.barcode or 'NO BARCODE ON PRODUCT ' + l.product_id.name"/>;<t t-esc="int(l.product_qty)"/>
-</t></t>
+
+ </t></t>
 </template>
 
 </odoo>

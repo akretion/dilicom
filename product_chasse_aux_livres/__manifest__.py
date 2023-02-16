@@ -23,5 +23,5 @@ This module has been written by Alexis de Lattre from Akretion
         'wizard/api_chasse_aux_livres_view.xml',
         'security/ir.model.access.csv',
         ],
-    'installable': True,
+    'installable': False,
 }
