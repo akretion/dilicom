@@ -4,7 +4,7 @@
 
 {
     'name': 'Purchase - API chasse-aux-livres.fr',
-    'version': '14.0.1.0.0',
+    'version': '16.0.1.0.0',
     'license': 'AGPL-3',
     'summary': "Glue module between purchase and product_chasse_aux_livres",
     'description': """
@@ -23,6 +23,6 @@ This module has been written by Alexis de Lattre from Akretion
         'wizard/api_chasse_aux_livres_menu.xml',
         'security/ir.model.access.csv',
         ],
-    'installable': False,
+    'installable': True,
     'auto_install': True,
 }
