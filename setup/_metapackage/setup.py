@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo-addon-product_chasse_aux_livres>=16.0dev,<16.1dev',
         'odoo-addon-purchase_chasse_aux_livres>=16.0dev,<16.1dev',
         'odoo-addon-purchase_dilicom_csv>=16.0dev,<16.1dev',
+        'odoo-addon-purchase_interforum_xlsx>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
