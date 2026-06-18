@@ -29,10 +29,10 @@ class ApiChasseAuxLivres(models.TransientModel):
             raise UserError(_("The barcode %s is not a valid EAN-13 barcode.") % ean)
         ppo = self.env['product.product']
         action = self.env["ir.actions.actions"]._for_xml_id('product.product_template_action_all')
-        action['view_mode'] = 'form,tree,kanban'
+        action['view_mode'] = 'form,list,kanban'
         action['views'] = [
             (False, 'form'),
-            (False, 'tree'),
+            (False, 'list'),
             (False, 'kanban'),
             ]
         existing_product = ppo.with_context(active_test=False).search([('barcode', '=', ean)], limit=1)
@@ -116,7 +116,8 @@ class ApiChasseAuxLivres(models.TransientModel):
 
         context = {
             'default_name': name,
-            'default_detailed_type': 'product',
+            'default_type': 'consu',
+            'default_is_storable': True,
             'default_categ_id': categ_id,
             'default_author': author,
             'default_barcode': self.ean,

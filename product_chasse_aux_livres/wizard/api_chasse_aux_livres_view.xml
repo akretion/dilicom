@@ -10,7 +10,7 @@
     <field name="model">api.chasse.aux.livres</field>
     <field name="arch" type="xml">
         <form string="Create a product from chasse-aux-livres.fr">
-                    <div name="help"><p>This wizard will prepare a product pre-filled with the information from <a href="https://www.chasse-aux-livres.fr">chasse-aux-livres.fr</a>.</p></div>
+                    <div name="help"><p>This wizard will prepare a product pre-filled with the information from <a href="https://www.chasse-aux-livres.fr" target="_blank">chasse-aux-livres.fr</a>.</p></div>
             <group name="main">
                 <field name="ean"/>
             </group>

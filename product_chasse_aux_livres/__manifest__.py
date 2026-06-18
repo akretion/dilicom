@@ -4,7 +4,7 @@
 
 {
     'name': 'Product - API chasse-aux-livres.fr',
-    'version': '16.0.1.0.0',
+    'version': '18.0.1.0.0',
     'license': 'AGPL-3',
     'summary': "Create products from the API chasse-aux-livres.fr",
     'description': """
@@ -17,7 +17,7 @@ This module has been written by Alexis de Lattre from Akretion
 <alexis.delattre@akretion.com>.
     """,
     'author': 'Akretion',
-    'website': 'http://www.akretion.com',
+    'website': 'https://github.com/akretion/dilicom',
     'depends': ['product'],
     'data': [
         'wizard/api_chasse_aux_livres_view.xml',
