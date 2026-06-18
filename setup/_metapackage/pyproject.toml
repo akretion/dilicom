@@ -1,0 +1,14 @@
+[project]
+name = "odoo-addons-akretion-dilicom"
+version = "18.0.20260618.0"
+dependencies = [
+    "odoo-addon-product_chasse_aux_livres==18.0.*",
+    "odoo-addon-purchase_chasse_aux_livres==18.0.*",
+    "odoo-addon-purchase_dilicom_csv==18.0.*",
+    "odoo-addon-purchase_interforum_xlsx==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]
